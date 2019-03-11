@@ -41,17 +41,20 @@ void getPerson(PESSOA *agenda) {
 void setPerson(PESSOA *agenda) {
   char name[31];
   printf("Enter the person's name:\n");
-  scanf("%30[^\n]\n", name);
+  scanf("%30[^\n]", name);
   strcpy(agenda -> name, name);
+  getchar();
 
   printf("Input the person's phone number:\n");
   char phone[21];
-  scanf("%20[^\n]\n", phone);
+  scanf("%20[^\n]", phone);
+  getchar();
   strcpy(agenda -> phone, phone);
 
   int day, month, year;
   printf("Enter day, month and year the person was born:\n");
   scanf("%d %d %d", &day, &month, &year);
+  getchar();
   agenda -> birthday.day = day;
   agenda -> birthday.month = month;
   agenda -> birthday.year = year;
